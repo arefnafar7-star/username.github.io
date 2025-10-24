@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>سایت من</title>
+    <style>
+        body { background: black; color: white; text-align: center; padding: 50px; }
+        h1 { font-size: 48px; }
+        .time { position: absolute; top: 10px; right: 10px; color: #0f0; }
+    </style>
+</head>
+<body>
+    <div class="time" id="clock"></div>
+    <h1>ما همه جا هستیم</h1>
+    
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var date = now.toLocaleDateString('fa-IR');
+            var time = now.toLocaleTimeString('fa-IR');
+            document.getElementById('clock').innerHTML = date + ' - ' + time;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
