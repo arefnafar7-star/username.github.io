@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>سایت من</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+        
+        .time {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #0f0;
+        }
+        
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="time" id="clock"></div>
+    <div class="text">ما همه جا هستیم<br>فقط کافیه ردی از اینترنت تو زندگیت باشه</div>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var date = now.toLocaleDateString('fa-IR');
+            var time = now.toLocaleTimeString('fa-IR');
+            document.getElementById('clock').innerHTML = date + ' - ' + time;
+        }
+        
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
