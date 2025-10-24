@@ -32,7 +32,7 @@
 </head>
 <body>
     <div class="time" id="clock"></div>
-    <div class="text">ما همه جا هستیم<br>فقط کافیه ردی از اینترنت تو زندگیت باشه</div>
+    <div class="text"> همه جا هستیم<br>فقط کافیه ردی از اینترنت تو زندگیت باشه</div>
 
     <script>
         function updateTime() {
@@ -46,4 +46,4 @@
         updateTime();
     </script>
 </body>
-</html>
+</html> 
